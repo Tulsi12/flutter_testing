@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:testing/display.dart';
+import 'package:testing/screen/accelometer.dart';
+import 'package:testing/screen/sensor.dart';
+
+import 'screen/gyroscope.dart';
+import 'screen/proximity.dart';
 
 void main() {
   runApp(
@@ -7,8 +11,14 @@ void main() {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
-        '/': (context) => const Calculator(),
-        '/display': (context) => const DisplayScreen(),
+        '/': (context) => const SensorTest(),
+
+        '/accelerometer': (context) => const AccelometerScreen(),
+        '/gyroscope': (context) => const GyroscopeTest(),
+        '/proximity': (context) => const ProximityTest(),
+
+        // '/display': (context) => const DisplayScreen(),
+        // '/sensor': (context) => const SensorTest(),
       },
     ),
   );
